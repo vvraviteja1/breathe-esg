@@ -1,0 +1,4 @@
+trip_id,traveler,expense_type,origin,destination,departure_date,return_date,hotel_nights,distance_km
+T001,john.smith,FLIGHT,HYD,LHR,2024-01-10,2024-01-17,,
+T002,jane.doe,HOTEL,,,2024-01-10,2024-01-14,4,
+T003,raj.kumar,GROUND,,,2024-01-15,2024-01-15,,45
