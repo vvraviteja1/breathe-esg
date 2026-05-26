@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState('');
@@ -8,10 +8,7 @@ export default function Login({ onLogin }) {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post(
-        'http://127.0.0.1:8000/api/auth/login/',
-        { username, password }
-      );
+      const res = await api.post('/auth/login/', { username, password });
       localStorage.setItem('token', res.data.token);
       onLogin();
     } catch {
